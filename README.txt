@@ -46,7 +46,8 @@ $ make -f $LIB_MAPLE_HOME/Makefile USER_MODULES=/path/to/this/project install
 
 To save typing, there's a shell script, make-helper.sh, that you can
 call which just runs the above command line, and passes any additional
-arguments along to make. Examples:
+arguments along to make (note: it puts the build path in the directory
+you call it from). Examples:
 
 $ ./make-helper.sh clean
 $ ./make-helper.sh BOARD=maple_mini install

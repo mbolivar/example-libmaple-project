@@ -14,8 +14,8 @@ include $(MAKEDIR)/header.mk
 # the variable BUILDDIRS, like this. $(BUILD_PATH) is the directory
 # where compilation output (like object files) goes. The variable $(d)
 # gets expanded to the directory containing this rules.mk file.
-BUILDDIRS += $(BUILD_PATH)/$(d)/subdir1
-BUILDDIRS += $(BUILD_PATH)/$(d)/subdir2
+BUILDDIRS += $(BUILD_PATH)/$(d)/getter
+BUILDDIRS += $(BUILD_PATH)/$(d)/randomizer
 
 ### Local flags: these control how the compiler gets called.
 
@@ -47,7 +47,7 @@ ASFLAGS_$(d) :=
 ### Source files
 
 # cSRCS_$(d) are the C source files we want compiled.
-cSRCS_$(d) := subdir1/randomizer.c
+cSRCS_$(d) := randomizer/randomizer.c
 
 # cppSRCS_$(d) are the C++ sources we want compiled.  We have our own
 # main.cpp, and one additional file.
@@ -56,7 +56,7 @@ cSRCS_$(d) := subdir1/randomizer.c
 # will get confused and try to build it without our CXXFLAGS. So call
 # it something else. Annoying! Hopefully LeafLabs will fix it soon.
 cppSRCS_$(d) := real-main.cpp
-cppSRCS_$(d) += subdir2/getter.cpp
+cppSRCS_$(d) += getter/getter.cpp
 
 # sSRCS_$(d) are the assembly sources. We don't have any.
 sSRCS_$(d) :=

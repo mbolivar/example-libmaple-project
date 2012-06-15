@@ -19,7 +19,10 @@ BUILDDIRS += $(BUILD_PATH)/$(d)/randomizer
 
 ### Local flags: these control how the compiler gets called.
 
-# Here we set a variable for our project's include directory.
+# Here we set a variable for our project's include directory.  Note
+# that the project top-level directory (i.e., the one containing this
+# rules.mk file) is automatically used for include files, so you don't
+# need to add it here.
 EXAMPLE_INCLUDE_DIR := $(d)/include
 
 # CFLAGS_$(d) are additional flags you want to give the C (not C++!)

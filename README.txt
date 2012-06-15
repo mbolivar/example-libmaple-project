@@ -48,7 +48,7 @@ To save typing, there's a shell script, make-helper.sh, that you can
 call which just runs the above command line, and passes any additional
 arguments along to make. Examples:
 
-$ ./helper.sh clean
-$ ./helper.sh BOARD=maple_mini install
+$ ./make-helper.sh clean
+$ ./make-helper.sh BOARD=maple_mini install
 
 Happy hacking!

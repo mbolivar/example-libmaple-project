@@ -21,11 +21,11 @@ starting your own project.
 
 Build this project and link it with libmaple like this:
 
-1. Setting the environment variable LIB_MAPLE_HOME to point to where
-   you have the libmaple Git repository.
+1. Set the environment variable LIB_MAPLE_HOME to point to where you
+   have the libmaple Git repository.
 
-2. Telling make to use libmaple's Makefile, and having it pay
-   attention to your rules.mk, like this:
+2. Tell make to use libmaple's Makefile, and have it pay attention to
+   your rules.mk, like this:
 
    $ make -f $LIB_MAPLE_HOME/Makefile USER_MODULES=/path/to/this/project
 

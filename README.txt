@@ -1,32 +1,31 @@
 What's This?
 ============
 
-This is an example libmaple project which illustrates how to use the
-libmaple build system to compile and link your source code correctly.
+This is an example project, which shows how to use the libmaple build
+system to compile and upload your own projects.
 
 It works with libmaple fetched from the LeafLabs GitHub repository:
 
    https://github.com/leaflabs/libmaple
 
-libmaple's build system is a little complicated, and the library makes
-a lot of assumptions about how it gets compiled and linked. For that
-reason, the easiest thing to do when starting a new project is just to
-use libmaple's Makefile, and inform it to build your sources.
+IMPORTANT: To hack around the libmaple build system (the poor thing
+           gets so confused), you MUST have an empty main.cpp in the
+           libmaple directory. I know that's annoying; sorry.
 
 How Do I Use It?
 ================
 
-The file rules.mk is a Makefile fragment that tells libmaple's own
+Look at rules.mk. It's a Makefile fragment that tells libmaple's
 Makefile how to build your project's sources. Use it as a template for
 starting your own project.
 
-You can build this project and link it with libmaple by:
+Build this project and link it with libmaple like this:
 
 1. Setting the environment variable LIB_MAPLE_HOME to point to where
    you have the libmaple Git repository.
 
-2. Telling make to use libmaple's Makefile, and telling that Makefile
-   to pay attention to this rules.mk, like this:
+2. Telling make to use libmaple's Makefile, and having it pay
+   attention to your rules.mk, like this:
 
    $ make -f $LIB_MAPLE_HOME/Makefile USER_MODULES=/path/to/this/project
 

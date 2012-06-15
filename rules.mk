@@ -1,9 +1,5 @@
 # Template rules.mk file.
 
-# IMPORTANT: In order to hack around the libmaple build system (the
-# poor thing gets so confused), make sure you leave an empty main.cpp
-# in the libmaple directory. I know that's annoying; sorry.
-
 # First, include the standard libmaple rules.mk header. Leave this
 # line alone.
 include $(MAKEDIR)/header.mk

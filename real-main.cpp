@@ -5,16 +5,21 @@
 #include "getter.h"
 #include "randomizer.h"
 
+// And an include of a project-local library (see libfoo directory):
+#include <foo/foo.h>
+
 // setup() and loop():
 
 void setup(void) {
     Getter.begin();
     randomizer_init(Getter.getValue());
+    pinMode(BOARD_LED_PIN, OUTPUT);
 }
 
 void loop(void) {
     SerialUSB.print("The value is: ");
     SerialUSB.println(randomizer_get_value());
+    foo();
 }
 
 // Standard libmaple init() and main.

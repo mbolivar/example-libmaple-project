@@ -27,7 +27,12 @@ Build this project and link it with libmaple like this:
 2. Tell make to use libmaple's Makefile, and have it pay attention to
    your rules.mk, like this:
 
-   $ make -f $LIB_MAPLE_HOME/Makefile USER_MODULES=/path/to/this/project
+   $ make -f $LIB_MAPLE_HOME/Makefile USER_MODULES='/path/to/this/project/foolib /path/to/this/project'
+
+   The first part of USER_MODULES tells libmaple to use this
+   directory's rules.mk. The second part tells it about an extra
+   library, foolib, that your project uses, which has its own
+   rules.mk.
 
 What Else?
 ==========
@@ -36,12 +41,12 @@ You're using the libmaple Makefile, so you can also use any of the
 variables it respects. For instance, to compile for Maple Mini, use
 BOARD=maple_mini in the usual way:
 
-$ make -f $LIB_MAPLE_HOME/Makefile BOARD=maple_mini USER_MODULES=/path/to/this/project
+$ make -f $LIB_MAPLE_HOME/Makefile BOARD=maple_mini USER_MODULES='/path/to/this/project/foolib /path/to/this/project'
 
 You can also use any of the libmaple Makefile targets. For example, to
 "make install":
 
-$ make -f $LIB_MAPLE_HOME/Makefile USER_MODULES=/path/to/this/project install
+$ make -f $LIB_MAPLE_HOME/Makefile USER_MODULES='/path/to/this/project/foolib /path/to/this/project
 
 To save typing, there's a shell script, make-helper.sh, that you can
 call which just runs the above command line, and passes any additional

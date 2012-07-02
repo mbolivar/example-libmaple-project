@@ -25,10 +25,11 @@ BUILDDIRS += $(BUILD_PATH)/$(d)/randomizer
 # need to add it here.
 EXAMPLE_INCLUDE_DIR := $(d)/include
 
-# CFLAGS_$(d) are additional flags you want to give the C (not C++!)
-# compiler. You at least want to have this, which provide the
-# appropriate GCC -I switches to let you include libmaple headers.
-CFLAGS_$(d) := $(WIRISH_INCLUDES) $(LIBMAPLE_INCLUDES)
+# CFLAGS_$(d) are additional flags you want to give the C compiler.
+# WIRISH_INCLUDES and LIBMAPLE_INCLUDES provide the appropriate GCC -I
+# switches to let you include libmaple headers. FOO_INCLUDES gives the
+# include switches you need for the foolib headers.
+CFLAGS_$(d) := $(WIRISH_INCLUDES) $(LIBMAPLE_INCLUDES) $(FOO_INCLUDES)
 # We'll also want our local include directory
 CFLAGS_$(d) += -I$(EXAMPLE_INCLUDE_DIR)
 

@@ -14,16 +14,24 @@ include $(MAKEDIR)/header.mk
 # the variable BUILDDIRS, like this. $(BUILD_PATH) is the directory
 # where compilation output (like object files) goes. The variable $(d)
 # gets expanded to the directory containing this rules.mk file.
-BUILDDIRS += $(BUILD_PATH)/$(d)/getter
-BUILDDIRS += $(BUILD_PATH)/$(d)/randomizer
+PROJECT_BUILD_DIRS := getter
+PROJECT_BUILD_DIRS += randomizer
+
+BUILDDIRS += $(addprefix $(BUILD_PATH)/$(d)/, $(PROJECT_BUILD_DIRS))
 
 ### Local flags: these control how the compiler gets called.
 
-# Here we set a variable for our project's include directory.  Note
+# Here we set a variable for our project's include directories.  Note
 # that the project top-level directory (i.e., the one containing this
 # rules.mk file) is automatically used for include files, so you don't
 # need to add it here.
-EXAMPLE_INCLUDE_DIR := $(d)/include
+PROJECT_INCLUDE_DIRS := include
+PROJECT_INCLUDE_DIRS += libfoo/include
+
+#EXTERNAL_INCLUDE_DIRS := /some/external/include/dir/with/absolute/path
+
+FLAGS_ABS_INCLUDE := $(addprefix -I$(d)/, $(PROJECT_INCLUDE_DIRS))
+FLAGS_ABS_INCLUDE += $(addprefix -I/, $(EXTERNAL_INCLUDE_DIRS))
 
 # CFLAGS_$(d) are additional flags you want to give the C compiler.
 # WIRISH_INCLUDES and LIBMAPLE_INCLUDES provide the appropriate GCC -I
@@ -31,12 +39,12 @@ EXAMPLE_INCLUDE_DIR := $(d)/include
 # include switches you need for the foolib headers.
 CFLAGS_$(d) := $(WIRISH_INCLUDES) $(LIBMAPLE_INCLUDES) $(FOO_INCLUDES)
 # We'll also want our local include directory
-CFLAGS_$(d) += -I$(EXAMPLE_INCLUDE_DIR)
+CFLAGS_$(d) += $(FLAGS_ABS_INCLUDE)
 
 # CXXFLAGS_$(d) are extra flags passed to the C++ compiler. We'll need
 # our include directory, and we'll also add an extra definition as a
 # demo (look in getter.cpp for how it's used).
-CXXFLAGS_$(d) := -DMY_MAGIC_NUMBER=0x1eaf1ab5 -I$(EXAMPLE_INCLUDE_DIR)
+CXXFLAGS_$(d) := -DMY_MAGIC_NUMBER=0x1eaf1ab5 $(FLAGS_ABS_INCLUDE)
 
 # ASFLAGS_$(d) are extra flags passed to the assembler. We don't
 # have any assembly language files in this example, so we'll just

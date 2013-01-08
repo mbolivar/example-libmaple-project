@@ -2,10 +2,10 @@
 BASEDIR := $(shell pwd)
 
 # Libmaple location
-LIB_MAPLE_HOME := ~/work/maple/libmaple
+LIB_MAPLE_HOME ?= ~/your/custom/path/to/libmaple
 
 # Board configuration
-BOARD ?= maple_RET6
+BOARD ?= maple
 MEMORY_TARGET ?= flash
 
 # Custom modules listed here.

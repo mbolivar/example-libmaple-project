@@ -17,12 +17,12 @@ IMPORTANT: To hack around the libmaple build system (the poor thing
 How Do I Use It?
 ================
 
-There are two configuration files: Makefile and rules.mk
+There are two configuration files: Makefile and rules.mk.
 
 Look at Makefile. It's your project Makefile which behaves like a proxy
-to libmaple Makefile. Use it as a temlate for starting your own project.
+to libmaple Makefile. Use it as a template for starting your own project.
 
-Follow variables needs to be configured:
+The following variables needs to be configured:
 
 LIB_MAPLE_HOME - should point to the root directory of libmaple project,
                  may be defined as relative path, say '~/maple/libmaple'. 
@@ -70,7 +70,7 @@ How Do I Use It with Eclipse CDT?
 From this point you can start tweaking example-libmaple-project to
 implement your own project. 
 
-If you will have unresolved symbol errors in a Plroblems view for your
+If you will have unresolved symbol errors in a Problems view for your
 project, then fix it as follow:
 1) right click on project and go Properties -> C/C++ General -> Indexer
 2) turn on 'Enable project specific settings'

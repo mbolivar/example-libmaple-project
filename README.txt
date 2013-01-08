@@ -19,8 +19,8 @@ How Do I Use It?
 
 There are two configuration files: Makefile and rules.mk.
 
-Look at Makefile. It's your project Makefile which behaves like a proxy
-to libmaple Makefile. Use it as a template for starting your own project.
+Look at Makefile. It's your project Makefile, which behaves like a proxy
+to libmaple's Makefile. Use it as a template for starting your own project.
 
 The following variables needs to be configured:
 
@@ -38,18 +38,19 @@ Your project is a user module and it is configured implicitly. Libfoo is
 another user module defined inside of your project (user module inside of
 user module).
 
-It is important not to confuse a concept of user module with a concept
-of source files directory. User modules are concepts of higher level, they
-are configured in Makefile. Each user module consists of some number of
-source file directories and its own rules.mk file. Source file directories
-of user module are configured in rules.mk file.
+It is important not to confuse the concept of a user module with the
+concept of the source files directory. User modules are concepts of
+higher level, they are configured in Makefile. Each user module
+consists of some number of source file directories and its own
+rules.mk file. Source file directories of user modules are configured
+in the rules.mk file.
 
-The rules.mk file is a Makefile fragment that is used in libmaple's build
-system. It tells libmaple's Makefile how to build your project's sources.
-Use it as a template for starting your own project.
+rules.mk is a Makefile fragment that is used in libmaple's build
+system. It tells libmaple's Makefile how to build your project's
+sources.  Use it as a template for starting your own project.
 
 Use 'make clean' command to clean your project. Use 'make sketch' to build
-your project and link it with libmaple
+your project and link it with libmaple.
 
 How Do I Use It with Eclipse CDT?
 =================================
@@ -70,8 +71,8 @@ How Do I Use It with Eclipse CDT?
 From this point you can start tweaking example-libmaple-project to
 implement your own project. 
 
-If you will have unresolved symbol errors in a Problems view for your
-project, then fix it as follow:
+If you have unresolved symbol errors in a Problems view for your
+project, then fix it as follows:
 1) right click on project and go Properties -> C/C++ General -> Indexer
 2) turn on 'Enable project specific settings'
 3) turn on 'Index unused headers as C files'

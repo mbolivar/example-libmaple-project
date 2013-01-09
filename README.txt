@@ -77,14 +77,15 @@ implement your own project.
 
 If you have unresolved symbol errors in a Problems view for your
 project, then fix it as follows:
+
 1) right click on project and go Properties -> C/C++ General -> Indexer
 2) turn on 'Enable project specific settings'
 3) turn on 'Index unused headers as C files'
 4) turn on 'Index unused headers as C++ files'
 5) if you have no LIB_MAPLE_HOME variable set so far in your environment
    then go to C/C++ Build -> Environment and set it there
-6) then you have go C/C++ General -> Paths and Symbols and set following
-   values for all languages and configurations:
+6) then you have go C/C++ General -> Paths and Symbols and add following
+   values on Includes tab for all languages and configurations:
 
    ${LIB_MAPLE_HOME}/wirish/include
    ${LIB_MAPLE_HOME}/libmaple/include

@@ -1,5 +1,5 @@
 // Here's a wirish include:
-#include <wirish.h>
+#include <wirish/wirish.h>
 
 // And some local includes:
 #include "getter.h"

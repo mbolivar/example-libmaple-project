@@ -81,20 +81,22 @@ project, then fix it as follows:
 2) turn on 'Enable project specific settings'
 3) turn on 'Index unused headers as C files'
 4) turn on 'Index unused headers as C++ files'
-5) don't forget to save your settings with Apply or OK button
-6) if you have no LIB_MAPLE_HOME variable set so far in your environment
+5) if you have no LIB_MAPLE_HOME variable set so far in your environment
    then go to C/C++ Build -> Environment and set it there
-7) then you have go C/C++ General -> Paths and Symbols and set following
+6) then you have go C/C++ General -> Paths and Symbols and set following
    values for all languages and configurations:
 
-${LIB_MAPLE_HOME}/wirish/include
-${LIB_MAPLE_HOME}/libmaple/include
-${LIB_MAPLE_HOME}/wirish/boards/<directory with your board name>/include
-${LIB_MAPLE_HOME}/libmaple/<directory with your cpu family code>/include
+   ${LIB_MAPLE_HOME}/wirish/include
+   ${LIB_MAPLE_HOME}/libmaple/include
+   ${LIB_MAPLE_HOME}/wirish/boards/<directory with your board name>/include
+   ${LIB_MAPLE_HOME}/libmaple/<directory with your cpu family code>/include
 
-Example directory names for board and cpu:
-${LIB_MAPLE_HOME}/wirish/boards/maple_RET6/include
-${LIB_MAPLE_HOME}/libmaple/stm32f1/include
+   Example directory names for board and cpu:
+
+   ${LIB_MAPLE_HOME}/wirish/boards/maple_RET6/include
+   ${LIB_MAPLE_HOME}/libmaple/stm32f1/include
+
+7) don't forget to save your settings with Apply or OK button
 
 Now you can make clean and build for your project. Undefined symbol errors
 should go away.

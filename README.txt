@@ -24,8 +24,12 @@ to libmaple's Makefile. Use it as a template for starting your own project.
 
 The following variables needs to be configured:
 
-LIB_MAPLE_HOME - should point to the root directory of libmaple project,
-                 may be defined as relative path, say '~/maple/libmaple'. 
+LIB_MAPLE_HOME - it should point to the root directory of libmaple project,
+                 may be defined as relative path, say '~/maple/libmaple'.
+                 It may be a good idea to set it as environment variable
+                 instead of Makefile variable. In case of using environment
+                 variable you don't need to edit it in Makefile and it will
+                 be used automatically. 
 
 BOARD          - board type. Use 'make list-boards' to see the list of
                  supported boards.
@@ -73,11 +77,30 @@ implement your own project.
 
 If you have unresolved symbol errors in a Problems view for your
 project, then fix it as follows:
+
 1) right click on project and go Properties -> C/C++ General -> Indexer
 2) turn on 'Enable project specific settings'
 3) turn on 'Index unused headers as C files'
 4) turn on 'Index unused headers as C++ files'
-5) don't forget to save your settings with Apply or OK button
+5) if you have no LIB_MAPLE_HOME variable set so far in your environment
+   then go to C/C++ Build -> Environment and set it there
+6) you need to go C/C++ General -> Paths and Symbols and add following
+   values on Includes tab for all languages and configurations:
+
+   ${LIB_MAPLE_HOME}/wirish/include
+   ${LIB_MAPLE_HOME}/libmaple/include
+   ${LIB_MAPLE_HOME}/wirish/boards/<directory with your board name>/include
+   ${LIB_MAPLE_HOME}/libmaple/<directory with your cpu family code>/include
+
+   Example directory names for board and cpu:
+
+   ${LIB_MAPLE_HOME}/wirish/boards/maple_RET6/include
+   ${LIB_MAPLE_HOME}/libmaple/stm32f1/include
+
+7) don't forget to save your settings with Apply or OK button
+
+Now you can make clean and build for your project. Undefined symbol errors
+should go away.
 
 Also, you can add/use any Makefile targets to the Make Target view of
 Eclipse CDT. It is located at top-right corner of workspace while using

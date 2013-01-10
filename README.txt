@@ -24,12 +24,13 @@ to libmaple's Makefile. Use it as a template for starting your own project.
 
 The following variables needs to be configured:
 
-LIB_MAPLE_HOME - it should point to the root directory of libmaple project,
-                 may be defined as relative path, say '~/maple/libmaple'.
-                 It may be a good idea to set it as environment variable
-                 instead of Makefile variable. In case of using environment
-                 variable you don't need to edit it in Makefile and it will
-                 be used automatically. 
+LIB_MAPLE_HOME - it should point to the root directory of libmaple
+                 project, may be defined as relative path, say
+                 '~/maple/libmaple'.  It may be a good idea to set it
+                 as an environment variable instead of a Makefile
+                 variable. As an environment variable, you won't need
+                 to edit it in Makefile and it will be used
+                 automatically.
 
 BOARD          - board type. Use 'make list-boards' to see the list of
                  supported boards.
@@ -37,24 +38,26 @@ BOARD          - board type. Use 'make list-boards' to see the list of
 MEMORY_TARGET  - binary deployment type: 'flash', 'ram' or 'jtag'. See
                  'make help' for details. 
 
-Also, custom libmaple modules may be configured with USER_MODULES variable.
-Your project is a user module and it is configured implicitly. Libfoo is
-another user module defined inside of your project (user module inside of
-user module).
+Also, custom libmaple modules may be configured with USER_MODULES
+variable.  Your project is a user module and it is configured
+implicitly. Libfoo is another user module defined inside of this
+project. (Libfoo is an example of how you can add additional
+third-party libraries to your project, if you want.)
 
 It is important not to confuse the concept of a user module with the
-concept of the source files directory. User modules are concepts of
-higher level, they are configured in Makefile. Each user module
-consists of some number of source file directories and its own
-rules.mk file. Source file directories of user modules are configured
-in the rules.mk file.
+concept of the source files directory. USER_MODULES is a list of
+directories that the libmaple Makefile expects to contain additional
+code to include in the build. Each directory in USER_MODULES must
+contain a rules.mk, which describes how to compile the module. The
+list of user modules configured in this project Makefile.
 
-rules.mk is a Makefile fragment that is used in libmaple's build
-system. It tells libmaple's Makefile how to build your project's
-sources.  Use it as a template for starting your own project.
+Each rules.mk file is a Makefile fragment that is used in libmaple's
+build system. It tells libmaple's Makefile how to build your project's
+sources.  Use the rules.mk in this project as templates when starting
+your own project.
 
-Use 'make clean' command to clean your project. Use 'make sketch' to build
-your project and link it with libmaple.
+Use 'make clean' command to clean your project. Use 'make' (or 'make
+sketch') to build your project and link it with libmaple.
 
 How Do I Use It with Eclipse CDT?
 =================================
@@ -113,11 +116,11 @@ You're using the libmaple Makefile, so you can also use any of the
 variables it respects. For instance, to compile for Maple Mini, use
 BOARD=maple_mini in the usual way:
 
-$ make BOARD=maple_mini USER_MODULES='/path/to/this/project/foolib /path/to/this/project'
+$ make BOARD=maple_mini
 
 You can also use any of the libmaple Makefile targets. For example, to
 "make install":
 
-$ make install USER_MODULES='/path/to/this/project/foolib /path/to/this/project'
+$ make install
 
 Happy hacking!

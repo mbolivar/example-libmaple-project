@@ -84,7 +84,7 @@ project, then fix it as follows:
 4) turn on 'Index unused headers as C++ files'
 5) if you have no LIB_MAPLE_HOME variable set so far in your environment
    then go to C/C++ Build -> Environment and set it there
-6) then you have go C/C++ General -> Paths and Symbols and add following
+6) you need to go C/C++ General -> Paths and Symbols and add following
    values on Includes tab for all languages and configurations:
 
    ${LIB_MAPLE_HOME}/wirish/include

@@ -8,11 +8,49 @@ It works with libmaple fetched from the LeafLabs GitHub repository:
 
    https://github.com/leaflabs/libmaple
 
-IMPORTANT: To hack around the libmaple build system (the poor thing
-           gets so confused), you MUST have an empty main.cpp in the
-           libmaple directory. I know that's annoying; sorry. Just
-           copy this empty main.cpp file to the root directory of
-           libmaple.
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+X                                                                             X
+X   IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT     X
+X                                                                             X
+X                                                                             X
+X             ___           _,.---,---.,_                                     X
+X             |         ,;~'             '~;,                                 X    
+X             |       ,;                     ;,                               X            
+X    Frontal  |      ;                         ; ,--- Supraorbital Foramen    X                                
+X     Bone    |     ,'                         /'                             X        
+X             |    ,;                        /' ;,                            X        
+X             |    ; ;      .           . <-'  ; |                            X        
+X             |__  | ;   ______       ______   ;<----- Coronal Suture         X                            
+X            ___   |  '/~"     ~" . "~     "~\'  |                            X        
+X            |     |  ~  ,-~~~^~, | ,~^~~~-,  ~  |                            X        
+X  Maxilla,  |      |   |        }:{        | <------ Orbit                   X                
+X                           x          x                                      X
+X Nasal and  |      |   l       / | \       !   |                             X        
+X Zygomatic  |      .~  (__,.--" .^. "--.,__)  ~.                             X        
+X   Bones    |      |    ----;' / | \ `;-<--------- Infraorbital Foramen      X                                
+X            |__     \__.       \/^\/       .__/                              X        
+X               ___   V| \                 / |V <--- Mastoid Process          X                            
+X               |      | |T~\___!___!___/~T| |                                X    
+X               |      | |`IIII_I_I_I_IIII'| |                                X    
+X      Mandible |      |  \,III I I I III,/  |                                X    
+X               |       \   `~~~~~~~~~~'    /                                 X    
+X               |         \   .       . <-x---- Mental Foramen                X                    
+X               |__         \.    ^    ./                                     X
+X                             ^~~~^~~~^                                       X
+X                                                                             X
+X   IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT     X
+X                                                                             X
+X     !   To hack around the libmaple build system (the poor thing    !       X
+X     !   gets so confused), you MUST have an empty* main.cpp in the  !       X
+X     !   libmaple directory. I know that's annoying; sorry. Just     !       X
+X     !   copy this empty main.cpp file to the root directory of      !       X
+X     !   libmaple.                                                   !       X
+X     !                                                               !       X
+X     !   *: "empty", as in, zero bytes, as in \0, as in "no main()"  !       X
+X                                                                             X
+X   IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT     X
+X                                                                             X
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
 How Do I Use It?
 ================

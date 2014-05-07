@@ -14,27 +14,27 @@ X   IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT     X
 X                                                                             X
 X                                                                             X
 X             ___           _,.---,---.,_                                     X
-X             |         ,;~'             '~;,                                 X    
-X             |       ,;                     ;,                               X            
-X    Frontal  |      ;                         ; ,--- Supraorbital Foramen    X                                
-X     Bone    |     ,'                         /'                             X        
-X             |    ,;                        /' ;,                            X        
-X             |    ; ;      .           . <-'  ; |                            X        
-X             |__  | ;   ______       ______   ;<----- Coronal Suture         X                            
-X            ___   |  '/~"     ~" . "~     "~\'  |                            X        
-X            |     |  ~  ,-~~~^~, | ,~^~~~-,  ~  |                            X        
-X  Maxilla,  |      |   |        }:{        | <------ Orbit                   X                
+X             |         ,;~'             '~;,                                 X
+X             |       ,;                     ;,                               X
+X    Frontal  |      ;                         ; ,--- Supraorbital Foramen    X
+X     Bone    |     ,'                         /'                             X
+X             |    ,;                        /' ;,                            X
+X             |    ; ;      .           . <-'  ; |                            X
+X             |__  | ;   ______       ______   ;<----- Coronal Suture         X
+X            ___   |  '/~"     ~" . "~     "~\'  |                            X
+X            |     |  ~  ,-~~~^~, | ,~^~~~-,  ~  |                            X
+X  Maxilla,  |      |   |        }:{        | <------ Orbit                   X
 X                           x          x                                      X
-X Nasal and  |      |   l       / | \       !   |                             X        
-X Zygomatic  |      .~  (__,.--" .^. "--.,__)  ~.                             X        
-X   Bones    |      |    ----;' / | \ `;-<--------- Infraorbital Foramen      X                                
-X            |__     \__.       \/^\/       .__/                              X        
-X               ___   V| \                 / |V <--- Mastoid Process          X                            
-X               |      | |T~\___!___!___/~T| |                                X    
-X               |      | |`IIII_I_I_I_IIII'| |                                X    
-X      Mandible |      |  \,III I I I III,/  |                                X    
-X               |       \   `~~~~~~~~~~'    /                                 X    
-X               |         \   .       . <-x---- Mental Foramen                X                    
+X Nasal and  |      |   l       / | \       !   |                             X
+X Zygomatic  |      .~  (__,.--" .^. "--.,__)  ~.                             X
+X   Bones    |      |    ----;' / | \ `;-<--------- Infraorbital Foramen      X
+X            |__     \__.       \/^\/       .__/                              X
+X               ___   V| \                 / |V <--- Mastoid Process          X
+X               |      | |T~\___!___!___/~T| |                                X
+X               |      | |`IIII_I_I_I_IIII'| |                                X
+X      Mandible |      |  \,III I I I III,/  |                                X
+X               |       \   `~~~~~~~~~~'    /                                 X
+X               |         \   .       . <-x---- Mental Foramen                X
 X               |__         \.    ^    ./                                     X
 X                             ^~~~^~~~^                                       X
 X                                                                             X
@@ -74,7 +74,7 @@ BOARD          - board type. Use 'make list-boards' to see the list of
                  supported boards.
 
 MEMORY_TARGET  - binary deployment type: 'flash', 'ram' or 'jtag'. See
-                 'make help' for details. 
+                 'make help' for details.
 
 Also, custom libmaple modules may be configured with USER_MODULES
 variable.  Your project is a user module and it is configured
@@ -103,7 +103,7 @@ How Do I Use It with Eclipse CDT?
 1) perform 'git clone' for libmaple and example-libmaple-project
    repositories
 2) import libmaple project with:
-   File -> New -> Project -> C/C++ -> Makefile Project with Existing Code  
+   File -> New -> Project -> C/C++ -> Makefile Project with Existing Code
 3) import example-libmaple-project project the same way
 4) right click on example-libmaple-project project, open:
    Properties -> C/C++ Build -> Behaviour tab
@@ -114,7 +114,7 @@ How Do I Use It with Eclipse CDT?
 7) perform example-libmaple-project project clean and build
 
 From this point you can start tweaking example-libmaple-project to
-implement your own project. 
+implement your own project.
 
 If you have unresolved symbol errors in a Problems view for your
 project, then fix it as follows:
@@ -145,7 +145,7 @@ should go away.
 
 Also, you can add/use any Makefile targets to the Make Target view of
 Eclipse CDT. It is located at top-right corner of workspace while using
-C/C++ perspective. 
+C/C++ perspective.
 
 What Else?
 ==========
